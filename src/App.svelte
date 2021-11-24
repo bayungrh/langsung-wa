@@ -66,10 +66,10 @@
 
 <main class="pr-2 pl-2 max-w-xl m-auto mx-auto">
   <section class="mt-20">
-    <h1 class="text-red-500 text-center text-6xl uppercase leading-snug font-thin">
+    <h1 class="text-red-500 text-center lg:text-5xl sm:text-3xl uppercase leading-relaxed font-thin">
       {name}
     </h1>
-    <p class="text-gray-700 dark:text-gray-300 text-center pb-5">
+    <p class="text-gray-700 dark:text-gray-300 text-center pb-6 pt-3">
       Chat nomor WhatsApp tanpa ribet simpan nomor kontak!
     </p>
 
