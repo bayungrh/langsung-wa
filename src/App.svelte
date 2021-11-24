@@ -64,13 +64,13 @@
 
 <button class="animate-pulse absolute top-0 right-0 bg-white-500 text-blue-300 p-3 text-2xl m-1 rounded hover:bg-blue-50 dark:hover:bg-gray-900" on:click={toggleDark}><i class={`fas ${toggleIcon}`}></i></button>
 
-<main class="max-w-xl m-auto mx-auto">
+<main class="pr-2 pl-2 max-w-xl m-auto mx-auto">
   <section class="mt-20">
     <h1 class="text-red-500 text-center text-6xl uppercase leading-snug font-thin">
       {name}
     </h1>
     <p class="text-gray-700 dark:text-gray-300 text-center pb-5">
-      Chat nomor WhatsApp tanpa fafifu wasweswos simpen nomor kontak!
+      Chat nomor WhatsApp tanpa ribet simpan nomor kontak!
     </p>
 
     { #if error }
