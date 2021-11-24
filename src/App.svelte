@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte';
-	export let name;
-	export let numberCodes;
+  export let name;
+  export let numberCodes;
   export let dark;
 
   let selectedCode = "+62";
@@ -57,8 +57,8 @@
   }
 
   onMount(() => {
-		applyTheme(dark);
-	});
+    applyTheme(dark);
+  });
 
 </script>
 
@@ -106,7 +106,7 @@
 </footer>
   
 <style lang="postcss" global>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 </style>
