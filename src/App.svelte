@@ -39,7 +39,7 @@
   
   const submit = (e) => {
     if (e) e.preventDefault();
-    const selectedCode = (selectedCode || '+62').replace(/^\+/gi, '');
+    const code = (selectedCode || '+62').replace(/^\+/gi, '');
     phoneNumber = phoneNumber && phoneNumber.toString();
     if (!phoneNumber) {
       error = 'Tolong masukan nomornya!';
@@ -48,7 +48,7 @@
       error = 'Nomor terlalu sedikit!';
       return;
     }
-    const number = `${selectedCode}${phoneNumber.replace(/[^0-9]-+/gi, '').replace(new RegExp(`^0|^${selectedCode}|^\\${selectedCode}`, 'gi'), '')}`;
+    const number = `${code}${phoneNumber.replace(/[^0-9]-+/gi, '').replace(new RegExp(`^0|^${code}|^\\${code}`, 'gi'), '')}`;
     if (!number) {
       error = 'Please use a valid phoneNumber number';
       return;
@@ -66,7 +66,7 @@
 
 <main class="pr-2 pl-2 max-w-xl m-auto mx-auto">
   <section class="mt-20">
-    <h1 class="text-red-500 text-center text-4xl lg:text-6xl uppercase leading-relaxed font-thin">
+    <h1 class="text-red-500 text-center text-5xl lg:text-6xl uppercase leading-relaxed font-thin">
       {name}
     </h1>
     <p class="text-gray-700 dark:text-gray-300 text-center pb-6 pt-3">
@@ -74,21 +74,21 @@
     </p>
 
     { #if error }
-      <div class="border-l-4 bg-red-100 border-red-500 text-red-700 p-4 mb-1" role="alert" style={{wordWrap: 'break-word'}}>
+      <div class="border-l-4 bg-red-100 border-red-500 text-red-700 p-4 mb-2" role="alert" style={{wordWrap: 'break-word'}}>
         { error }<br/>
       </div>
     { /if }
     <div class="container items-center">
-      <form class="flex dark:bg-gray-700 dark:border-gray-700 flex-col w-full p-5 px-6 pt-2 mx-auto mb-4 transition duration-500 ease-in-out transform bg-white border rounded-lg" id="submit" data-action="generate">
+      <form class="flex dark:bg-gray-700 dark:border-gray-700 flex-col w-full p-5 px-6 pt-2 mx-auto mb-4 transition duration-500 ease-in-out transform bg-white border rounded-md" id="submit" data-action="generate">
         <div class="relative pt-3">
-          <select bind:value={selectedCode} class="w-full px-4 py-2 mt-2 text-base text-black transition duration-500 ease-in-out transform rounded-lg bg-gray-100 focus:border-blueGray-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-2 dark:bg-gray-600 dark:text-white">
+          <select bind:value={selectedCode} class="w-full px-4 py-2 mt-2 text-base text-black transition duration-500 ease-in-out transform rounded-md bg-gray-100 focus:border-blueGray-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-2 dark:bg-gray-600 dark:text-white">
             { #each numberCodes as code }
               <option value={code.dial_code}>{code.name} ({code.dial_code})</option>
             { /each }
           </select>
         </div>
         <div class="relative pt-3">
-          <input bind:value={phoneNumber} on:input={filterNumber} type="string" minLength="10" min="0" maxLength="14" autoComplete="off" placeholder="Phone number" class="w-full px-4 py-2 mt-2 mr-4 text-base text-black transition duration-500 ease-in-out transform rounded-lg bg-gray-100 focus:border-blueGray-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-5 dark:bg-gray-600 dark:text-white" />
+          <input bind:value={phoneNumber} on:input={filterNumber} type="string" minLength="10" min="0" maxLength="14" autoComplete="off" placeholder="Phone number" class="w-full px-4 py-2 mt-2 mr-4 text-base text-black transition duration-500 ease-in-out transform rounded-md bg-gray-100 focus:border-blueGray-500 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-5 dark:bg-gray-600 dark:text-white" />
         </div>
       </form>
       <div class="relative">
