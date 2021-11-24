@@ -62,10 +62,10 @@
 
 </script>
 
-<button class="animate-pulse absolute top-0 right-0 bg-white-500 text-blue-300 p-3 text-2xl m-1 rounded hover:bg-blue-50 dark:hover:bg-gray-900" on:click={toggleDark}><i class={`fas ${toggleIcon}`}></i></button>
+<button class="animate-pulse absolute top-0 right-0 bg-white-500 text-blue-300 p-3 text-2xl m-1 rounded hover:bg-blue-50 dark:hover:bg-gray-800" on:click={toggleDark}><i class={`fas ${toggleIcon}`}></i></button>
 
 <main class="pr-2 pl-2 max-w-xl m-auto mx-auto">
-  <section class="mt-20">
+  <section class="mt-32">
     <h1 class="text-red-500 text-center text-5xl lg:text-6xl uppercase leading-relaxed font-thin">
       {name}
     </h1>
